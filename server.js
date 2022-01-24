@@ -65,7 +65,7 @@ io.on("connection", (socket) => {
   });
 });
 app.use(express.static(`${__dirname}/public`));
-const port = 3000;
+const port = process.config.PORT || 3000;
 server.listen(port, () => {
   console.log(`app running on port : ${port}`);
 });
